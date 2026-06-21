@@ -58,7 +58,7 @@ Payment modules for student enquiry registration and event registration forms. T
 - `script.js` - Header scroll behavior, mobile navigation, and dynamic year
 - `assets/portfolio-hero.png` - Hero background image
 - `assets/shubham-photo.jpeg` - Profile photo used in the header
-- `assets/shubham-rawat-resume.pdf` - Resume linked from the hero section
+- `assets/shubham-rawat-resume-with-portfolio.pdf` - Resume linked from the hero section
 
 ## Preview
 
