@@ -263,6 +263,7 @@ h3 {
 .experience-card li,
 .role-line {
   color: var(--muted);
+   font-size: 14px;
 }
 
 .intro-copy p:first-child {
