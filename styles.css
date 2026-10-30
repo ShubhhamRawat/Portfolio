@@ -146,7 +146,8 @@ img {
 }
 
 .hero-image,
-.hero-overlay {
+.hero-overlay,
+.hero-fluid-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -154,18 +155,38 @@ img {
 }
 
 .hero-image {
-  z-index: -2;
+  z-index: -3;
   object-fit: cover;
 }
 
 .hero-overlay {
-  z-index: -1;
+  z-index: -2;
   background:
     linear-gradient(90deg, rgba(5, 10, 18, 0.88) 0%, rgba(5, 10, 18, 0.68) 43%, rgba(5, 10, 18, 0.18) 100%),
     linear-gradient(180deg, rgba(5, 10, 18, 0.25), rgba(5, 10, 18, 0.58));
 }
 
+.hero-fluid-canvas {
+  z-index: -1;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.hero-fluid-canvas.is-ready {
+  opacity: 1;
+}
+
+@media (max-width: 768px), (pointer: coarse) {
+  .hero-fluid-canvas {
+    display: none;
+  }
+}
+
 .hero-content {
+  position: relative;
+  z-index: 1;
   width: min(760px, calc(100% - 36px));
   margin-left: clamp(18px, 7vw, 96px);
   padding-top: 72px;
